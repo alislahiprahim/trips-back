@@ -1,11 +1,12 @@
 {
     "version": 2,
+    "name": "yalla-bena",
     "builds": [{
         "src": "server.js",
-        "use": "@now/node"
+        "use": "@vercel/node"
     }],
     "routes": [{
         "src": "/(.*)",
-        "dest": "server.js"
+        "dest": "/server.js"
     }]
 }
