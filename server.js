@@ -42,7 +42,7 @@ app.use("/user", User);
 app.use("/trip", Trip);
 app.use("/login", Login);
 
-app.get("/resources/images/:fileName", VerifyToken, (req, resp) => {
+app.get("/resources/images/:fileName", (req, resp) => {
     const { fileName } = req.params;
     var __dirname = "./resources/images/";
     resp.sendFile(fileName, { root: __dirname }, (err, data) => {
